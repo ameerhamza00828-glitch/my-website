@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamza Tea Marketing</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f8;
+}
+
+header{
+background:#0f5132;
+color:white;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?w=1200');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#198754;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:6px;
+}
+
+.section{
+padding:70px 8%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.card button{
+background:#25D366;
+border:none;
+padding:10px 20px;
+color:white;
+cursor:pointer;
+border-radius:5px;
+margin-top:10px;
+}
+
+.contact{
+text-align:center;
+background:white;
+border-radius:10px;
+padding:30px;
+}
+
+footer{
+background:#0f5132;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+text-decoration:none;
+color:white;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:35px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Hamza Tea Marketing</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>Premium Tea Collection</h1>
+<p>Fresh Quality Tea For Homes & Businesses</p>
+<a href="#products" class="btn">Shop Now</a>
+</div>
+</section>
+
+<section class="section" id="products">
+
+<h2>Our Products</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600">
+<div class="card-content">
+<h3>Premium Black Tea</h3>
+<p>250g - Rs.600</p>
+<button onclick="order('Premium Black Tea 250g')">Order Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?w=600">
+<div class="card-content">
+<h3>Green Tea</h3>
+<p>250g - Rs.600</p>
+<button onclick="order('Green Tea 250g')">Order Now</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600">
+<div class="card-content">
+<h3>Special Tea Mix</h3>
+<p>1kg - Rs.5000</p>
+<button onclick="order('Special Tea Mix 1kg')">Order Now</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="contact">
+<h2>Contact Us</h2>
+
+<p><b>WhatsApp:</b> 0321-7691979</p>
+<p><b>Email:</b> ameerhamza00828@gmail.com</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Hamza Tea Marketing - All Rights Reserved</p>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/923217691979"
+target="_blank">💬</a>
+
+<script>
+function order(product){
+let message =
+"Assalam-o-Alaikum,%0AI want to order: " + product;
+
+window.open(
+"https://wa.me/923217691979?text="+message,
+"_blank"
+);
+}
+</script>
+
+</body>
+</html>
